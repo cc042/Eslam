@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <!-- meta -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- title -->
+    <title>روحانيات</title>
+
+    <!-- links -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="assets/read-quran.png">
+
+    <!-- scripts -->
+    <script src="JS/index.js" defer></script>
+    <script src="JS/azan.js" defer></script>
+    <script src="JS/services.js" defer></script>
+    <script src="JS/tabs.js" defer></script>
+    <script src="JS/quran.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <dialog class="Load" open> <!-- Done -->
+        <div class="loader">
+            <div class="quater ii"></div>
+            <div class="quater i"></div>
+        </div>
+    </dialog>
+
+    <dialog class="estefsar"> <!-- Done -->
+        <div class="close">
+            <button class="estefsarclose">
+                <img src="assets/close.svg" alt="x">
+            </button>
+            <h1 class="additions">قسم الاستفسارات</h1>
+        </div>
+        <div class="estefsaritems">
+            <div class="estefsarname">
+                <video src="assets/phone.mp4" autoplay loop width="40" height="40" muted></video>
+                <h1>قسم الاستفسارات</h1>
+            </div>
+            <textarea id="estefsartext" placeholder="ما الذى تريد ان تستفسر فيه"></textarea>
+            <button type="submit" class="estefsarsend">استفسر</button>
+        </div>
+    </dialog>
+
+    <dialog class="Follows"> <!-- Done -->
+        <div class="followsitems">
+            <button class="Followsclose">
+                <img src="assets/close.svg" alt="x">
+            </button>
+
+            <div class="socials">
+                <div class="youtube" id="app">
+                    <img src="assets/youtube.svg" alt="YouTube" width="32" height="32">
+                    <a href="https://www.youtube.com/" target="_blank">أضغط هنا</a>
+                </div>
+
+                <div class="instagram" id="app">
+                    <img src="assets/instagram.svg" alt="Instagram" width="32" height="32">
+                    <a href="https://www.instagram.com/" target="_blank">أضغط هنا</a>
+                </div>
+
+                <div class="x" id="app">
+                    <img src="assets/twitter.svg" alt="X" width="32" height="32">
+                    <a href="https://www.twitter.com/" target="_blank">أضغط هنا</a>
+                </div>
+
+                <div class="tiktok" id="app">
+                    <img src="assets/tik-tok.png" alt="Tik Tok" width="32" height="32">
+                    <a href="https://www.tiktok.com/" target="_blank">أضغط هنا</a>
+                </div>
+            </div>
+        </div>
+    </dialog>
+
+    <dialog class="alert1"> <!-- Done -->
+        <div class="alert1items">
+            <button class="exitalert1">
+                <img src="assets/close.svg" alt="x">
+            </button>
+            <h1></h1>
+        </div>
+    </dialog>
+
+    <header> <!-- Done -->
+        <div class="rightdevsection">
+            <img src="assets/read-quran.png" alt="Logo">
+            <h1>روحانيات</h1>
+        </div>
+        <div class="leftdevsection">
+            <ul>
+                <li><button class="contact">أتصل بنا</button></li>
+                <li><button class="FollowMe">تابعنى</button></li>
+                <li><button id="estefsar">استفسار</button></li>
+            </ul>
+        </div>
+    </header>
+
+    <nav>
+        <input type="radio" name="tab" id="Holy_Quran" disabled>
+        <input type="radio" name="tab" id="prayerBtn">
+        <label for="Holy_Quran">المصحف</label>
+        <label for="prayerBtn">الصلاة</label>
+    </nav>
+
+    <main>
+        <section class="HolyQuran active">
+            <div class="header">
+                <img src="assets/book.png" alt="Holy Quran" width="50">
+                <h2 id="alert1">المصحف</h2>
+            </div>
+            <div class="surahs"></div>
+        </section>
+
+        <section class="Praying">
+            <div class="header">
+                <img src="assets/prayer.png" alt="pray" width="50">
+                <h2>الصلاة</h2>
+            </div>
+
+            <div class="Prayers">
+                <div class="fajr" id="pray">
+                    <h2>فجر</h2>
+                    <img style="animation: updown 1s ease-in-out infinite alternate;" src="assets/fajr.png" alt="fajr"
+                        width="100">
+                    <h3 class="fajrTime">Loading...</h3>
+                </div>
+
+                <div class="fajr" id="pray">
+                    <h2>الضحى</h2>
+                    <img style="animation: updown 1s ease-in-out infinite alternate;" src="assets/sunrise.png"
+                        alt="sunrice" width="100">
+                    <h3 class="shurooqTime">Loading...</h3>
+                </div>
+
+                <div class="dohr" id="pray">
+                    <h2>الظهر</h2>
+                    <img style="animation: updown 1s ease-in-out infinite alternate;" src="assets/dhuhr.png" alt=""
+                        width="100">
+                    <h3 class="DuhrTime">Loading...</h3>
+                </div>
+
+                <div class="asr" id="pray">
+                    <h2>العصر</h2>
+                    <img style="animation: updown 1s ease-in-out infinite alternate;" src="assets/asr.png" alt="asr"
+                        width="100">
+                    <h3 class="asrTime">Loading...</h3>
+                </div>
+
+                <div class="maarb" id="pray">
+                    <h2>المغرب</h2>
+                    <img style="animation: updown 1s ease-in-out infinite alternate;" src="assets/sunset.png"
+                        alt="maghreb" width="100">
+                    <h3 class="maghrebTime">Loading...</h3>
+                </div>
+
+                <div class="esha" id="pray">
+                    <h2>العشاء</h2>
+                    <img style="animation: updown 1s ease-in-out infinite alternate;" src="assets/isha.png" alt="Isha"
+                        width="100">
+                    <h3 class="ishaTime">Loading...</h3>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <h1>@Copyright Reseved By Code Comet</h1>
+    </footer>
+</body>
+
+</html>
